@@ -1,0 +1,20 @@
+---
+- name: Work with rpm 
+  hosts: almatest
+  become: true
+
+  tasks:
+
+  - name: Soft | Install necessary soft 
+    ansible.builtin.dnf:
+      name:
+      - wget
+      - rpmdevtools
+      - rpm-build
+      - createrepo
+      - yum-utils
+      - cmake
+      - gcc
+      - git
+      - nano
+      - mc
